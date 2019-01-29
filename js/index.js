@@ -117,3 +117,10 @@ nav.append(createNode("After"));
 
 // change nav color
 navLinks.forEach(link => link.style.color = 'green');
+
+//Stretch 
+
+ctaBtn.addEventListener('click', ()=> {
+  let h4 = document.querySelectorAll('h4');
+  h4.forEach(item => item.style.color = 'green');
+});
