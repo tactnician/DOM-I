@@ -40,3 +40,33 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
+console.log(ctaImg);
+
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//Nav
+
+const navKeys = Object.keys(siteContent['nav']);
+console.log(navKeys);
+
+// const nav = document.querySelectorAll('nav a').forEach((item, index) => navKeys.forEac );
+
+
+
+
+
+// Text 
+
+const h1 = document.querySelector('.cta-text h1');
+h1.innerHTML= 'DOM Svengali<br>was<br>here!';
+console.log(h1);
+
+
+
+
+
+
