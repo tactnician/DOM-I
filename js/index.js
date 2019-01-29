@@ -39,34 +39,37 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+console.log(logo);
 
-const ctaImg = document.getElementById("cta-img");
+let ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 console.log(ctaImg);
 
-const middleImg = document.getElementById('middle-img');
+let middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 //Nav
 
-const navKeys = Object.keys(siteContent['nav']);
-console.log(navKeys);
+// let navKeys = Object.keys(siteContent['nav']);
+// console.log(navKeys);
 
-// const nav = document.querySelectorAll('nav a').forEach((item, index) => navKeys.forEac );
+let navLinks = document.querySelectorAll('nav a');
+console.log(navLinks);
 
+navLinks.forEach((link, i)=> link.innerHTML= siteContent.nav[`nav-item-${i+1}`]);
+console.log(navLinks);
 
+//CTA section
 
-
-
-// Text 
-
-const h1 = document.querySelector('.cta-text h1');
+let h1 = document.querySelector('.cta-text h1');
 h1.innerHTML= 'DOM Svengali<br>was<br>here!';
-console.log(h1);
 
+let ctaBtn = document.querySelector('.cta button');
+ctaBtn.innerHTML = siteContent['cta']['button'];
 
+//Main Content
 
-
+// let 
 
 
