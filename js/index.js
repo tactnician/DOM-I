@@ -103,6 +103,17 @@ let footer = document.querySelector('footer');
 footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright'];
 
 //New Content 
+
+// new nav items
+nav = document.getElementsByTagName("nav")[0];
+console.log(nav);
+let createNode = (nodeName) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = nodeName;
+  return newNode;
+}
+nav.prepend(createNode("B4"));
+nav.append(createNode("After"));
+
 // change nav color
 navLinks.forEach(link => link.style.color = 'green');
-
