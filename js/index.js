@@ -70,6 +70,39 @@ ctaBtn.innerHTML = siteContent['cta']['button'];
 
 //Main Content
 
-// let 
+let mainContentList = document.querySelectorAll('.text-content');
+// console.log(mainContentList);
+// console.log(Object.entries(siteContent["main-content"])[0]);
 
+// mainContentList.forEach((item, i)=>{
+//   console.log(mainContentList[i]);
+//   mainContentList[i].getElementsByTagName('h4')[i].innerHTML =  Object.keys(siteContent["main-content"])[i]
+// })
+mainContentList[0].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContentList[0].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
+mainContentList[1].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+mainContentList[1].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
+mainContentList[2].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+mainContentList[2].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+mainContentList[3].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+mainContentList[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+mainContentList[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+mainContentList[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+//Contact Section 
+
+let contact = document.getElementsByClassName("contact")[0];
+console.log(contact);
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"]
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"]
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"]
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"]
+
+//Footer Section
+let footer = document.querySelector('footer');
+footer.getElementsByTagName('p')[0].innerHTML = siteContent['footer']['copyright'];
+
+//New Content 
+// change nav color
+navLinks.forEach(link => link.style.color = 'green');
 
